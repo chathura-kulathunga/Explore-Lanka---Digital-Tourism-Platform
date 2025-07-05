@@ -1,0 +1,32 @@
+/* ====================================
+   Explore Lanka - Footer CSS
+   ====================================
+   Description: This file contains styles for
+   footer layout, colors, and fade-in animation.
+*/
+
+/* Animation base class */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-in-out;
+}
+
+/* Applied when element is visible in viewport */
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay classes for staggered animations */
+.delay-1 {
+  transition-delay: 0.2s;
+}
+
+.delay-2 {
+  transition-delay: 0.4s;
+}
+
+.delay-3 {
+  transition-delay: 0.6s;
+}

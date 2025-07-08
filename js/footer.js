@@ -1,26 +1,18 @@
-// ==============================================
-// Explore Lanka - Footer JS (footer.js)
-// ==============================================
-// Description: Reveals footer sections smoothly
-// using scroll-triggered fade-in animations.
-// Uses IntersectionObserver API.
+// footer.js
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Select all elements that should animate
-  const animElements = document.querySelectorAll('.animate');
+document.addEventListener("DOMContentLoaded", () => {
+  const observerOptions = {
+    threshold: 0.1
+  };
 
-  // Create an intersection observer instance
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Add 'visible' class to trigger animation
-        entry.target.classList.add('visible');
+        entry.target.classList.add("visible");
+        obs.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.1 // Trigger when 10% of element is visible
-  });
+  }, observerOptions);
 
-  // Observe each animated element
-  animElements.forEach(el => observer.observe(el));
+  document.querySelectorAll('.animate').forEach(el => observer.observe(el));
 });

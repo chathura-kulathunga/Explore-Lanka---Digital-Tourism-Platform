@@ -1,0 +1,127 @@
+/* === Parallax1 Scrolling Section === */
+.parallax {
+  background-image: url('../assets/images/hero/parallax1.jpg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;  
+  justify-content: center; 
+  align-items: center;     
+
+  text-align: center;    
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  padding: 3rem 1rem;
+}
+
+.parallax-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.parallax-text {
+  max-width: 800px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+/* === Parallax2 Scrolling Section === */
+.parallax2 {
+  background-image: url('../assets/images/hero/parallax2.jpg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 300px) {
+  .parallax2 {
+    background-attachment: scroll;
+  }
+}
+
+.parallax2 p {
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+}
+
+.icon-style {
+  background-color: white;
+  color: #0d6efd; 
+  border-radius: 50%;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 18px;
+  border: 2px solid white;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.icon-style.fa-facebook { color: #1877F2; }
+.icon-style.fa-instagram { color: #E1306C; }
+.icon-style.fa-youtube { color: #FF0000; }
+.icon-style.fa-envelope { color: #EA4335; }
+.icon-style.fa-phone-alt { color: #25D366; }
+.icon-style.fa-map-marker-alt { color: #FF5722; }
+
+.icon-style:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+}
+
+/* === Scroll to Top Button Style === */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  background-color: #ffffff;
+  color: #333;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 10px 14px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; 
+  transition: opacity 0.3s ease-in-out;
+}
+
+#scrollTopBtn:hover {
+  background-color: #f1f1f1;
+}
+
+/* === Custom Scrollbar === */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff8c00, #ffa500); 
+  border-radius: 10px;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffa500, #ffcc00); 
+}
